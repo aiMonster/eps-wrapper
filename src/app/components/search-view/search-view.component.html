@@ -1,0 +1,10 @@
+<div class="app-search-view-container">
+    <app-search-form (optionsSelected)="searchForMeters($event)"></app-search-form>
+    <div class="charts-container">
+        <app-chart-view 
+            *ngFor="let dataset of chartDatasets; let i = index"
+            [dataset]="dataset"
+            [chartIndex]="i"
+        ></app-chart-view>
+    </div>
+</div>

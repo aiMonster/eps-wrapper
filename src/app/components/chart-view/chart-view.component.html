@@ -1,0 +1,15 @@
+<div class="app-chart-view-container">
+    <div class="chart-options-selectors">
+        <p-selectButton [options]="chartTypeOptions" [(ngModel)]="chartType" optionValue="value" (onChange)="updateChartType()">
+            <ng-template let-item>
+                <i [class]="item.icon"></i>
+            </ng-template>
+        </p-selectButton>
+        <p-selectButton [options]="colorOptions" [(ngModel)]="chartColor" optionValue="color" (onChange)="updateChartColor()">
+            <ng-template let-item>
+                <i class="pi pi-circle-fill" [style.color]="item.color"></i>
+            </ng-template>
+        </p-selectButton>
+    </div>
+    <p-chart [type]="chartType" [data]="data" [options]="options"></p-chart>
+</div>

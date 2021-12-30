@@ -1,0 +1,11 @@
+.app-chart-view-container {
+    width: 650px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #495057;
+
+    .chart-options-selectors {
+        display: flex;
+        justify-content: space-between;
+    }
+}

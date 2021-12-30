@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://www.eps.org.ua/",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
