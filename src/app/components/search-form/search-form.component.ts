@@ -2,8 +2,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MonthConstants } from 'src/app/constants/month.constants';
 import { IHistorySearchRequest } from 'src/app/interfaces/history-search-request.interface';
 
-// TODO: Fix dropdown z-index
-
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
