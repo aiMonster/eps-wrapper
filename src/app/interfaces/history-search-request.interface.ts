@@ -1,4 +1,7 @@
 export interface IHistorySearchRequest {
+    /** Account key */
+    key: string;
+
     /** Start date of the search */
     dateFrom: Date;
 

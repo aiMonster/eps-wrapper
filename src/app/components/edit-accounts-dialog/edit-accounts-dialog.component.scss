@@ -1,0 +1,29 @@
+.app-edit-accounts-dialog-container {
+    .header {
+        font-weight: bold;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .table-grid {
+        display: flex;
+        margin-bottom: 10px;
+
+        .title-col {
+            width: 225px;
+        }
+
+        .value-col {
+            width: 225px;
+        }
+
+        .trash-icon-col {
+            width: 50px;
+        }
+    }
+}

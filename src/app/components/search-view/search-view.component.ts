@@ -12,11 +12,7 @@ import { AccountInfoService } from 'src/app/services/account-info.service';
   templateUrl: './search-view.component.html',
   styleUrls: ['./search-view.component.scss']
 })
-export class SearchViewComponent implements OnInit {
-  // TODO: Don't hardcode keys
-  private readonly key = 'zA728ZPJCGo_e1kV_rVw5Q';
-  private readonly haiKey = 'KVLk-u-8sakSmqm3Tx8aAg';
-
+export class SearchViewComponent {
   chartDatasets: IChartData[] = [];
 
   constructor(
@@ -24,16 +20,12 @@ export class SearchViewComponent implements OnInit {
     private parser: AccountInfoParserService
   ) { }
 
-  /** On init */
-  ngOnInit(): void {
-    // TODO: Call somewhere else
-    // TODO: Add some loaders
-    
-    this.accountInfoService.getCurrentMeters(this.haiKey).subscribe();
-  }
-
   searchForMeters(request: IHistorySearchRequest): void {
-    this.accountInfoService.getMetersHistory(this.haiKey, request.dateFrom, request.dateTo).subscribe(response => {
+    // TODO: Call first only once or do them one after another
+    // TODO: Add some loaders
+    // TODO: Handle errors
+    this.accountInfoService.getCurrentMeters(request.key).subscribe();
+    this.accountInfoService.getMetersHistory(request.key, request.dateFrom, request.dateTo).subscribe(response => {
       this.setNewChartValues(response)
     });
   }

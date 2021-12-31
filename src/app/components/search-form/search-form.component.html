@@ -1,6 +1,15 @@
 <div class="app-search-form-container">
+    <p-dropdown
+        class="account-select"
+        [options]="accountOptions"
+        [(ngModel)]="accountKey"
+        optionLabel="label"
+        optionValue="value"
+        placeholder="Оберіть аккаунт"
+    ></p-dropdown>
+    <p-button class="account-edit" icon="pi pi-user-edit" title="Редагувати аккаунти" (onClick)="editAccounts()"></p-button>
     <p-dropdown [options]="dateOptions" [(ngModel)]="dateFrom" optionLabel="label" optionValue="value"></p-dropdown>
     <div class="to-lbl">-</div>
     <p-dropdown [options]="dateOptions" [(ngModel)]="dateTo" optionLabel="label" optionValue="value"></p-dropdown>
     <p-button class="search-btn" label="Шукати" (onClick)="search()"></p-button>
-</div>
+</div> 

@@ -13,13 +13,18 @@ import { ChartViewComponent } from './components/chart-view/chart-view.component
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { SearchViewComponent } from './components/search-view/search-view.component';
+import { EditAccountsDialogComponent } from './components/edit-accounts-dialog/edit-accounts-dialog.component';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartViewComponent,
     SearchFormComponent,
-    SearchViewComponent
+    SearchViewComponent,
+    EditAccountsDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,10 @@ import { SearchViewComponent } from './components/search-view/search-view.compon
     ButtonModule,
     ChartModule,
     DropdownModule,
-    SelectButtonModule
+    SelectButtonModule,
+    DynamicDialogModule,
+    ScrollPanelModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
